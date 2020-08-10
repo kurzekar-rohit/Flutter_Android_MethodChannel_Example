@@ -34,7 +34,7 @@ public class CallReceiver extends BroadcastReceiver {
             return;
         }
         customPhoneListener.onCallStateChanged(context, state, phone_number);
-        Toast.makeText(context, "Phone Number " + phone_number, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(context, "Phone Number " + phone_number, Toast.LENGTH_SHORT).show();
         Intent myIntent = new Intent(context, MainActivity.class);
         myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         myIntent.putExtra("phone", phone_number);

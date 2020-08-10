@@ -34,6 +34,18 @@ public class MainActivity extends FlutterActivity {
                     @Override
                     public void onMethodCall(MethodCall methodCall, MethodChannel.Result result) {
                         checkAndRequestPermissions();
+                        Intent intent = getIntent();
+                        String str = intent.getStringExtra("phone");
+
+                        System.out.println("MainActivity Phone NO. Print: " + str);
+                        String phone_no = str;
+                        System.out.println("phone_no str : 1   " + phone_no);
+                        if (phone_no != null) {
+                            result.success(phone_no);
+                            System.out.println("phone_no str : 2   " + phone_no);
+                        } else {
+                            result.error("UNAVAILABLE", "NULL value.", null);
+                        }
                     }
                 }
         );

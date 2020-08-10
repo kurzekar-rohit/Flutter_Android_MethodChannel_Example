@@ -25,14 +25,14 @@ public class MyPhoneStateListener extends PhoneStateListener {
                 isIncoming = true;
                 callStartTime = new Date();
 
-                Toast.makeText(context, "Incoming Call Ringing " + phoneNumber, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "Incoming Call Ringing " + phoneNumber, Toast.LENGTH_SHORT).show();
 
                 break;
             case TelephonyManager.CALL_STATE_OFFHOOK:
                 if (lastState != TelephonyManager.CALL_STATE_RINGING) {
                     isIncoming = false;
                     callStartTime = new Date();
-                    Toast.makeText(context, "Outgoing Call Started " + phoneNumber, Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "Outgoing Call Started " + phoneNumber, Toast.LENGTH_SHORT).show();
                 }
                 break;
 
@@ -40,13 +40,13 @@ public class MyPhoneStateListener extends PhoneStateListener {
 //Went to idle-  this is the end of a call.  What type depends on previous state(s)
                 if (lastState == TelephonyManager.CALL_STATE_RINGING) {
 //Ring but no pickup-  a miss
-                    Toast.makeText(context, "Ringing but no pickup" + phoneNumber + " Call time " + callStartTime + " Date " + new Date(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "Ringing but no pickup" + phoneNumber + " Call time " + callStartTime + " Date " + new Date(), Toast.LENGTH_SHORT).show();
                 } else if (isIncoming) {
 
-                    Toast.makeText(context, "Incoming " + phoneNumber + " Call time " + callStartTime, Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "Incoming " + phoneNumber + " Call time " + callStartTime, Toast.LENGTH_SHORT).show();
                 } else {
 
-                    Toast.makeText(context, "outgoing " + phoneNumber + " Call time " + callStartTime + " Date " + new Date(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "outgoing " + phoneNumber + " Call time " + callStartTime + " Date " + new Date(), Toast.LENGTH_SHORT).show();
 
                 }
 
