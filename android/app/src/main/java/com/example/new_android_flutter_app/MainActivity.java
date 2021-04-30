@@ -12,8 +12,6 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-//import io.flutter.embedding.android.FlutterActivity;
-//import io.flutter.app.FlutterActivity;
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.plugin.common.MethodCall;
@@ -39,10 +37,11 @@ public class MainActivity extends FlutterActivity {
 
                         System.out.println("MainActivity Phone NO. Print: " + str);
                         String phone_no = str;
-                        System.out.println("phone_no str : 1   " + phone_no);
+                        System.out.println("phone_no str :  " + phone_no);
+
                         if (phone_no != null) {
                             result.success(phone_no);
-                            System.out.println("phone_no str : 2   " + phone_no);
+//                            System.out.println("phone_no str : 2   " + phone_no);
                         } else {
                             result.error("UNAVAILABLE", "NULL value.", null);
                         }
